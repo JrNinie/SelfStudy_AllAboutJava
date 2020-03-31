@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- 第一部分：数据库配置 -->
+		<property name="connection.url">jdbc:postgresql://localhost/db_hibernate</property> <!-- BD Mane -->
+   		<property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+   		<property name="connection.username">u.hibernate</property> <!-- DB User -->
+   		<property name="connection.password">123</property> <!-- DB Password -->
+   		
+		<!-- 第二部分：hibernate配置 -->
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect 让hibernate识别不同数据库自己特有的语句 -->
+   		<property name="hbm2ddl.auto">update</property> <!-- update 如果已经有表，更新。如果没有，创建。当然还可以有create / create-drop   -->
+		<property name="show_sql">true</property> <!-- Show SQL in console 输出底层sql语句 -->
+		<!-- <property name="format_sql">true</property> --> <!-- Show SQL formatted 格式化了看起来更清楚-->
+		<property name="hibernate.current_session_context_class">thread</property> <!-- 绑定线程 -->
+		
+		<!-- 第三部分：把映射文件放进来 -->
+		<!-- <mapping class="entities.User.hbm.xml"/> -->
+		<mapping resource="fr/afpa/entities/ContactMan.hbm.xml"/>
+		<mapping resource="fr/afpa/entities/Customer.hbm.xml"/>
+		<mapping resource="fr/afpa/entities/User.hbm.xml"/>
+		<mapping resource="fr/afpa/entities/Role.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

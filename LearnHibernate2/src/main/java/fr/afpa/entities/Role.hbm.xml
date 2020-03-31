@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- 1.配置类和表的对应 name：实体类的全路径（包名+表名） table:数据库里对应的表的名称 -->
+	<class name="fr.afpa.entities.Role" table="t_role">
+		<id name="rid" column="rid">
+			<generator class="identity" />
+		</id>
+
+		<!-- 2.设置实体类的其它属性和表的对应关系 -->
+		<property name="roleName" column="roleName" />
+
+		<!--3. 建立与role多对多的映射关系 -->
+		<set name="users" table="t_user_role" cascade="save-update" inverse="true">
+			<!-- column里要填，role在这个中间表里作为外键的名称 -->
+			<key column="role_id" />
+			<!-- column里要填，user在这个中间表里作为外键的名称 -->
+			<many-to-many class="fr.afpa.entities.User"
+				column="user_id" />
+		</set>
+	</class>
+
+
+
+
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<!-- 1.配置类和表的对应
+	name：实体类的全路径（包名+表名）
+	table:数据库里对应的表的名称
+	 -->
+	<class name="fr.afpa.entities.User" table="t_user">
+		<!-- 2.配置实体类id和表id的对应关系
+		name:实体类id的属性名称
+		column:生成表的字段名 (如果不写的话，那么默认和name的值一致)
+		两者可以不一样，但是建议一致
+		 -->
+		<id name="uid" column="uid">
+			<!-- 3.设置数据库表id的增长策略
+			native：主键自增长
+			uuid:生成uuid
+			 -->
+			 <generator class="native"></generator>
+			<!-- <generator class="uuid"></generator> -->
+		</id>
+		
+		<!-- 4.设置实体类的其它属性和表的对应关系 -->
+		<property name="userName" column="userName"></property>
+		<property name="password" column="password"></property>
+		<property name="address" column="address"></property>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- 1.建立OID与主键的映射 -->
+	<class name="fr.afpa.entities.User" table="t_user">
+		<id name="uid" column="uid">
+			<generator class="identity" />
+		</id>
+
+		<!-- 2.设置实体类的其它属性和表的对应关系 -->
+		<property name="userName" column="userName"></property>
+		<property name="password" column="password"></property>
+		<property name="address" column="address"></property>
+
+
+		<!--3. 建立与role多对多的映射关系 -->
+		<!-- name: role集合在user中的名字 table: 多对多会建立一个额外的表格，给出这个中间表的名字 -->
+		<set name="roles" table="t_user_role" cascade ="save-update">
+			<!-- column里要填，user在这个中间表里作为外键的名称 -->
+			<key column="user_id" />
+			<!-- column里要填，role在这个中间表里作为外键的名称 -->
+			<many-to-many class="fr.afpa.entities.Role"
+				column="role_id" />
+		</set>
+	</class>
+
+</hibernate-mapping>

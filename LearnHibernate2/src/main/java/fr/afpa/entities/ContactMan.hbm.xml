@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="fr.afpa.entities.ContactMan" table="t_contactman">
+		<id name="cm_id" column="cm_id">
+			<generator class="identity"></generator>
+			<!-- <generator class="sequence">
+                <param name="sequence">contactman_id_sequence</param>
+        	</generator> -->
+		</id>
+		<property name="cm_name" column="cm_name"></property>
+		<property name="cm_gender" column="cm_gender"></property>
+		<property name="cm_phone" column="cm_phone"></property>
+		<property name="cm_mobile" column="cm_mobile"></property>
+		<property name="cm_mail" column="cm_mail"></property>
+		<property name="cm_position" column="cm_position"></property>
+		<property name="cm_memo" column="cm_memo"></property>
+		
+		<!-- many to one :
+		name : the name of foreign key in "many", so CST not CUSTOMER
+		class: path for class Customer
+		-->
+		
+		<many-to-one name="cst" class="fr.afpa.entities.Customer" column="cm_cust_id" cascade="save-update"/>
+	</class>
+</hibernate-mapping>
