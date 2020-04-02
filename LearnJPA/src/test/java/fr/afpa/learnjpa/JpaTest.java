@@ -98,5 +98,19 @@ public class JpaTest {
 		em.close();	
 	}
 	
+	@Test
+	public void testMergeWithUtils() {
+		EntityManager em = EMFactoryUtils.getEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		Customer cst = em.getReference(Customer.class, 5L);
+		cst.setCustMobile("0677889900");
+		em.merge(cst);
+				
+		tx.commit();
+		em.close();	
+	}
+	
 }
 
