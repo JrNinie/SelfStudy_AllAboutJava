@@ -19,6 +19,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		<!-- 数据库连接池信息，看下面的bean有相关的配置 -->
 		<property name="dataSource" ref="dataSource"/>
 		<!-- 实体类所在的包,是 packagesToScan复数哦-->
+		<!-- 这里注意：包名sprintdatajpa，包名起错了，这里也继续沿用了错误的包名，原本想起“springdatajpa” -->
 		<property name="packagesToScan" value="fr.afpa.learnsprintdatajpa.domain"/>
 		<!-- jpa的实现厂家-hibernate -->
 		<property name="persistenceProvider">

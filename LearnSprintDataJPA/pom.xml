@@ -152,11 +152,18 @@
 			<version>2.13.1</version>
 		</dependency>
 
-		<!-- postgresql -->
-		<dependency>
+		<!-- 这个postgresql依赖不行，无法在数据池中取得连接 -->
+<!-- 	<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901-1.jdbc4</version>
+		</dependency> -->
+
+		<!-- 这个才是正确的postgresql依赖 -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.12</version>
 		</dependency>
 
 
