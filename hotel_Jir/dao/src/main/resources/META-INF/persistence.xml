@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	version="2.0">
+	<!--1、配置persistence-unit节点 
+	name: 随便起个名字 
+	transaction-type: 
+		-JTA:分布式事务管理（如果表存在不同的数据库当中） 
+		-RESOURCE-LOCAL： 本地事务管理（如果表存在一个数据库当中）
+	 -->
+	<persistence-unit name="hoteljpa"
+		transaction-type="RESOURCE_LOCAL">
+		
+		<class>org.afpa.hotel.jr.model.entities.Categorie</class>
+		<class>org.afpa.hotel.jr.model.entities.Chambre</class>
+		<class>org.afpa.hotel.jr.model.entities.Hotel</class>
+		<class>org.afpa.hotel.jr.model.entities.TypeHotel</class>
+
+		<!--(删除，否则报错)2、配置jpa的实现方式：hibernate -->
+		<!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
+
+
+		<properties>
+			<!--3、数据库信息配置required必填 -->
+			<property name="javax.persistence.jdbc.driver"
+				value="org.postgresql.Driver" /> <!--Driver首字母大写啊 -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://localhost/db_hotel" /> 
+			<property name="javax.persistence.jdbc.user"
+				value="u.hotel" /> 
+			<property name="javax.persistence.jdbc.password"
+				value="123" />
+				
+			<!--4、配置jap实现方（也就是hibernate）的可选信息 -->	
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> 
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update / none -->     
+            <property name="hibernate.show_sql" value="true" /> 
+            <property name="hibernate.format_sql" value="true" /> 
+
+		</properties>
+
+	</persistence-unit>
+</persistence>
+
+
+<!-- version2.2 doesn't work with my eclipse 2020-03 (4.15.0) -->
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+	version="2.2">
+	<persistence-unit name="hoteljpa">
+
+		<class>org.afpasigfox.hotel.entity.Categorie</class>
+		<class>org.afpasigfox.hotel.entity.Chambre</class>
+		<class>org.afpasigfox.hotel.entity.Hotel</class>
+		<class>org.afpasigfox.hotel.entity.TypeHotel</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://localhost:5432/db_hotel" />
+			<property name="javax.persistence.jdbc.user" value="u.hotel" />
+			<property name="javax.persistence.jdbc.password" value="123" />
+
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.PostgreSQL81Dialect" />
+			<property name="hibernate.hbm2ddl.auto" value="validate" />
+		</properties>
+	</persistence-unit>
+</persistence> -->
+
+

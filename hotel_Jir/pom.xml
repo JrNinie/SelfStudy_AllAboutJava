@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.afpa</groupId>
+	<artifactId>hotel_Jir</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- parent project must have POM as packaging -->
+	<packaging>pom</packaging>
+
+	<!-- different modules for this project parent -->
+	<modules>
+		<module>dao</module>
+		<module>model</module>
+		<module>services</module>
+		<module>web</module>
+	</modules>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<!-- why use DEPENDENCIES MANAGEMENT: -Artifacts specified in the <dependencies> 
+		section will ALWAYS be included as a dependency of the child module(s). -Artifacts 
+		specified in the <dependencyManagement> section, will only be included in 
+		the child module if they were also specified in their <dependencies> -So 
+		you specify the version and/or scope in the parent, and you can leave them 
+		out when specifying the dependencies in the child POM -->
+
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- modules -->
+			<dependency>
+				<groupId>com.afpa</groupId>
+				<artifactId>model</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.afpa</groupId>
+				<artifactId>dao</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.afpa</groupId>
+				<artifactId>services</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+
+			<!-- test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>3.8.1</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- postgresql -->
+<!-- 			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>42.2.11.jre7</version>
+			</dependency> -->
+
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>42.2.12</version>
+			</dependency>
+			
+			<!-- hibernate -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>5.4.13.Final</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>5.4.13.Final</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-jpamodelgen</artifactId>
+				<version>5.4.13.Final</version>
+			</dependency>
+
+
+			<!-- javax -->
+			<dependency>
+				<groupId>javax.persistence</groupId>
+				<artifactId>javax.persistence-api</artifactId>
+				<version>2.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.annotation</groupId>
+				<artifactId>javax.annotation-api</artifactId>
+				<version>1.3.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.xml.bind</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>2.3.1</version>
+			</dependency>
+
+
+			<!-- mapper -->
+			<dependency>
+				<groupId>org.modelmapper</groupId>
+				<artifactId>modelmapper</artifactId>
+				<version>2.3.6</version>
+			</dependency>
+
+			<!-- servlet -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>4.0.1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.2</version>
+			</dependency>
+
+
+
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>

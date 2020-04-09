@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.afpa</groupId>
+		<artifactId>hotel_Jir</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>web</artifactId>
+	<packaging>war</packaging>
+	<name>web Maven Webapp</name>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.afpa</groupId>
+			<artifactId>dao</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.afpa</groupId>
+			<artifactId>services</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<finalName>web</finalName>
+	</build>
+</project>

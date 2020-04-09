@@ -1,0 +1,11 @@
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/impl/GenericDaoImpl.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/impl/utils/JpaUtil.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/jpa/DAO.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/jpa/ChambreDao.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/impl/CategorieDaoJpaImpl.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/jpa/HotelDao.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/impl/ChambreDaoJpaImpl.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/impl/HotelDaoJpaImpl.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/impl/TypeHotelDaoJpaImpl.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/jpa/CategorieDao.java
+/Users/Jr/Documents/EXO_ENCOURS/hotel_Jir/dao/src/main/java/org/afpa/hotel/jr/dao/jpa/TypeHotelDao.java
