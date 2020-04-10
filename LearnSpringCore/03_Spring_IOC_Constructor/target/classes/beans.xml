@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--使用无参函数构造器和setter方法的注入-->
+<!--    <bean id="user" class="com.kuang.pojo.User">-->
+<!--       <property name="name" value="Ninie"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="student" class="com.kuang.pojo.Student">-->
+<!--        <property name="name" value="Linda"/>-->
+<!--    </bean>-->
+
+        <!--使用有参函数构造器注入-->
+        <bean id="user" class="com.kuang.pojo.User">
+            <constructor-arg name="name" value="Ninie"/>
+        </bean>
+
+        <!--user的别名是goodUser所以用其中任何一个名字都是可以的，
+        一般不建议这种写法，而是直接写在bean里面-->
+        <alias name="user" alias="goodUser"/>
+</beans>

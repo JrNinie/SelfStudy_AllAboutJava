@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    一般来说，可以把汇总的xml叫做applicationContext.xml，里面可以import其它的配置文件-->
+
+    <!--import用来引入其它的配置文件
+    我在这里把bean.xml复制了，构成了bean1和bean2，因此里面全是重复的bean，一点影响都没有
+    唯一的不同就是在bean.xml里面多了一个别名h4
+    那么在使用的时候无论是取hi还是h4，其实取到的bean都是同一个，没有问题
+    -->
+    <import resource="beans.xml"/>
+    <import resource="beans1.xml"/>
+    <import resource="beans2.xml"/>
+
+
+
+</beans>

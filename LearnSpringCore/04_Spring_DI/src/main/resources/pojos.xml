@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="student" class="com.kuang.pojo.Student" name="sdt">
+        <!--普通值注入value-->
+        <property name="name" value="Sandra"/>
+        <!--普通值注入value也可写成这种复杂点的格式-->
+<!--        <property name="name">-->
+<!--            <value>Sandra</value>-->
+<!--        </property>-->
+        
+        <!--bean值注入ref-->
+        <property name="address" ref="address"/>
+
+        <!--array-->
+        <property name="books">
+            <array>
+                <value>book1</value>
+                <value>book2</value>
+                <value>book3</value>
+            </array>
+        </property>
+
+        <!--list-->
+        <property name="hobbies">
+            <list>
+                <value>music</value>
+                <value>coding</value>
+                <value>film</value>
+            </list>
+        </property>
+
+
+        <!--map-->
+        <property name="card">
+            <map>
+                <entry key="card1" value="11111111"/>
+                <entry key="card2" value="22222222"/>
+            </map>
+        </property>
+
+
+        <!--set-->
+        <property name="games">
+           <set>
+               <value>LOL</value>
+               <value>BOB</value>
+           </set>
+        </property>
+
+        <!--null-->
+        <property name="friend">
+            <null/>
+        </property>
+
+        <!--properties-->
+        <property name="info">
+            <props>
+                <prop key="driver">xxx</prop>
+                <prop key="url">xxx</prop>
+                <prop key="username">xxx</prop>
+                <prop key="password">xxx</prop>
+            </props>
+        </property>
+    </bean>
+
+
+    <bean id="address" class="com.kuang.pojo.Address" name="adr">
+        <property name="address" value="4 street"/>
+    </bean>
+
+</beans>

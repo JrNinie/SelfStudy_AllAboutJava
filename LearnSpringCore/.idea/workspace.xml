@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -30,37 +33,79 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/01_Spring_BeforeIOC/src/main/resources" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/04_Spring_DI/src/main/resources" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.kuang.pojo" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kuang.pojo" />
       <recent name="com.kuang.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/04_Spring_DI/src/main/resources" />
+      <recent name="$PROJECT_DIR$/02_Spring_IOC_basique/src/main/resources" />
+      <recent name="$PROJECT_DIR$/03_Spring_IOC_Constructor/src/main/resources" />
       <recent name="$PROJECT_DIR$/01_Spring_BeforeIOC/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.myTest">
-    <configuration name="OldTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OldTest" />
-      <module name="01_Spring_BeforeIOC" />
+  <component name="RunManager" selected="JUnit.UserTest.testUserC">
+    <configuration name="MyTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <module name="04_Spring_DI" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="myTest" />
-      <module name="02_Spring_IOC_basique" />
+    <configuration name="MyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <module name="03_Spring_IOC_Constructor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="04_Spring_DI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testUserBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="04_Spring_DI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="testUserBean" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testUserC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="04_Spring_DI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="testUserC" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.myTest" />
-        <item itemvalue="Application.OldTest" />
+        <item itemvalue="JUnit.UserTest.testUserC" />
+        <item itemvalue="JUnit.UserTest.testUserBean" />
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="Application.MyTest (1)" />
+        <item itemvalue="Application.MyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -78,34 +123,42 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="452" y="41" key="#com.intellij.ide.util.MemberChooser" timestamp="1586463055603">
+    <state x="452" y="3" key="#com.intellij.ide.util.MemberChooser" timestamp="1586532316652">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="452" y="41" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1586463055603" />
-    <state width="1316" height="289" key="GridCell.Tab.0.bottom" timestamp="1586463185770">
+    <state x="452" y="3" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1586532316652" />
+    <state x="389" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586529950943">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1316" height="289" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586463185770" />
-    <state width="1316" height="190" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1586456383875" />
-    <state width="1316" height="289" key="GridCell.Tab.0.center" timestamp="1586463185768">
+    <state x="389" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.768@0.0.1366.768" timestamp="1586529950943" />
+    <state width="1316" height="232" key="GridCell.Tab.0.bottom" timestamp="1586532329562">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1316" height="289" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1586463185768" />
-    <state width="1316" height="190" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1586456383872" />
-    <state width="1316" height="289" key="GridCell.Tab.0.left" timestamp="1586463185767">
+    <state width="1316" height="232" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1586532329562" />
+    <state width="1316" height="232" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1586531532295" />
+    <state width="1316" height="232" key="GridCell.Tab.0.center" timestamp="1586532329558">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1316" height="289" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1586463185767" />
-    <state width="1316" height="190" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1586456383868" />
-    <state width="1316" height="289" key="GridCell.Tab.0.right" timestamp="1586463185769">
+    <state width="1316" height="232" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1586532329558" />
+    <state width="1316" height="232" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1586531532291" />
+    <state width="1316" height="232" key="GridCell.Tab.0.left" timestamp="1586532329557">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1316" height="289" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1586463185769" />
-    <state width="1316" height="190" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1586456383873" />
-    <state x="167" y="0" key="SettingsEditor" timestamp="1586450305117">
+    <state width="1316" height="232" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1586532329557" />
+    <state width="1316" height="232" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1586531532284" />
+    <state width="1316" height="232" key="GridCell.Tab.0.right" timestamp="1586532329560">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="167" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1586450305117" />
+    <state width="1316" height="232" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1586532329560" />
+    <state width="1316" height="232" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1586531532292" />
+    <state x="108" y="0" key="Maven.ArtifactSearchDialog" timestamp="1586530963110">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="108" y="0" key="Maven.ArtifactSearchDialog/0.0.1366.768@0.0.1366.768" timestamp="1586530963110" />
+    <state x="86" y="0" width="1280" height="768" key="SettingsEditor" timestamp="1586525525117">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="86" y="0" width="1280" height="768" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1586525525117" />
     <state x="376" y="228" key="com.intellij.ide.util.TipDialog" timestamp="1586450233157">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -114,10 +167,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="0" y="0" width="752" height="768" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1586450787009" />
-    <state x="0" y="23" key="new project wizard" timestamp="1586454942403">
+    <state x="0" y="23" key="new project wizard" timestamp="1586524541857">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="0" y="23" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1586454942403" />
+    <state x="0" y="23" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1586524541857" />
     <state x="264" y="0" width="838" height="1032" key="search.everywhere.popup" timestamp="1586462854998">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
