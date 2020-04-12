@@ -1,4 +1,4 @@
-import com.kuang.pojo.Student;
+import com.kuang.service.pojo.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

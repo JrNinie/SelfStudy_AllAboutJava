@@ -8,7 +8,7 @@
 
 
    <!--p =  property 可以直接注入值-->
-   <bean id="userP" class="com.kuang.pojo.User" p:name="Anna" p:age="23" p:sex="f"/>
+   <bean id="userP" class="com.kuang.pojo.User" scope="prototype" p:name="Anna" p:age="23" p:sex="f" />
 
    <!--c =  constructor-arg 可以直接注入值-->
    <bean id="userC" class="com.kuang.pojo.User" c:name="Lola" c:age="12" c:sex="f"/>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--开启注解-->
+    <context:annotation-config/>
+
+    <!--简单环境：一个类就一个bean-->
+<!--    <bean class="com.kuang.pojo.Cat"/>-->
+<!--    <bean class="com.kuang.pojo.Dog"/>-->
+<!--    <bean id="person" class="com.kuang.pojo.Person" />-->
+
+
+    <!--复杂环境：一个类就多个bean, 因为有多个bean，必须要有id
+    自动装配的时候，先按byType，后按byName(id)
+    对应的要在类的属性上加上@Qualifier()
+    -->
+    <bean id="cat1" class="com.kuang.pojo.Cat"/>
+    <bean id="cat2" class="com.kuang.pojo.Cat"/>
+    <bean id="cat3" class="com.kuang.pojo.Cat"/>
+    <bean id="dog1" class="com.kuang.pojo.Dog"/>
+    <bean id="dog2" class="com.kuang.pojo.Dog"/>
+    <bean id="dog3" class="com.kuang.pojo.Dog"/>
+    <bean id="person" class="com.kuang.pojo.Person" />
+
+</beans>

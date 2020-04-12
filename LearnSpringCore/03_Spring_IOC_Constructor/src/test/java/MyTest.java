@@ -1,5 +1,4 @@
-import com.kuang.pojo.User;
-import javafx.application.Application;
+import com.kuang.service.pojo.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

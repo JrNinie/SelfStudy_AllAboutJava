@@ -5,16 +5,16 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
         <!--使用无参函数构造器和setter方法的注入-->
-<!--    <bean id="user" class="com.kuang.pojo.User">-->
+<!--    <bean id="user" class="User">-->
 <!--       <property name="name" value="Ninie"/>-->
 <!--    </bean>-->
 
-<!--    <bean id="student" class="com.kuang.pojo.Student">-->
+<!--    <bean id="student" class="Student">-->
 <!--        <property name="name" value="Linda"/>-->
 <!--    </bean>-->
 
         <!--使用有参函数构造器注入-->
-        <bean id="user" class="com.kuang.pojo.User">
+        <bean id="user" class="User">
             <constructor-arg name="name" value="Ninie"/>
         </bean>
 

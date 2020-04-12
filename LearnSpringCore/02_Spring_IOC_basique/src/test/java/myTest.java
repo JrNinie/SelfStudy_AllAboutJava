@@ -1,4 +1,4 @@
-import com.kuang.pojo.Hello;
+import com.kuang.service.pojo.Hello;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,8 +8,11 @@ public class myTest {
         ApplicationContext context = new ClassPathXmlApplicationContext( "applicationContext.xml");
 
         //getBean返回的是objet需要cast
-        Hello hello = (Hello) context.getBean("h4");
-        System.out.println(hello.getGreeting());
+        Hello hello1 = (Hello) context.getBean("h4");
+        Hello hello2 = (Hello) context.getBean("h4");
+        System.out.println(hello1.hashCode());
+        System.out.println(hello2.hashCode());
+        System.out.println(hello1 == hello2);
 
     }
 }

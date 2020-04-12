@@ -4,19 +4,19 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="userDaoImpl"
-          class="com.kuang.dao.UserDaoImpl">
+          class="com.kuang.service.dao.UserDaoImpl">
     </bean>
 
     <bean id="userDaoJpaImpl"
-          class="com.kuang.dao.UserDaoJpaImpl">
+          class="com.kuang.service.dao.UserDaoJpaImpl">
     </bean>
 
     <bean id="userDaoMysqlImpl"
-          class="com.kuang.dao.UserDaoMysqlImpl">
+          class="com.kuang.service.dao.UserDaoMysqlImpl">
     </bean>
 
     <bean id="userServiceImpl"
-          class="com.kuang.service.UserServiceImpl">
+          class="com.kuang.service.service.UserServiceImpl">
         <property name="userDao" ref="userDaoMysqlImpl"/>
 
     </bean>

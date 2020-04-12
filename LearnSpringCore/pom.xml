@@ -13,6 +13,11 @@
         <module>02_Spring_IOC_basique</module>
         <module>03_Spring_IOC_Constructor</module>
         <module>04_Spring_DI</module>
+        <module>05_Spring_Autowired</module>
+        <module>06_Spring_Annotation</module>
+        <module>06_Spring_AppConfig</module>
+        <module>07_Spring_Proxy</module>
+        <module>08_Spring_AOP</module>
     </modules>
     <dependencies>
         <dependency>
@@ -40,6 +45,23 @@
                 <version>4.12</version>
                 <scope>test</scope>
             </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>5.2.5.RELEASE</version>
+                <scope>compile</scope>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>1.9.5</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

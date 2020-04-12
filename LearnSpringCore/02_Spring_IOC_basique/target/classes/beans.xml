@@ -7,14 +7,19 @@
     <!--
     id : 变量名，一般建议和类的名字一致，小写首字母（但我这故意起的不一样的以区别）
     class：对象的路径
-    name : 对象属性的名字
-    value: 给对象的属性赋值
+    name: 别名，可以起多个，可以用逗号、分号或者空格分隔
 
     通过bean来创建对象和之前传统new对象的比较：
     Hello hi = new Hello()
     hi.setGreeting = "Hello Everyone!"
     -->
-    <bean id="hi" class="com.kuang.pojo.Hello">
+
+    <!--这中创建方式利用的是每个类的无参构造函数和setter方法-->
+    <bean id="hi" class="com.kuang.pojo.Hello" name="hello1, he2, h3, h4" scope="prototype">
+        <!--
+        name : 对象属性的名字
+        value: 给对象的属性赋值
+        -->
         <!--利用类里面的setter，如果不小心把setGreeting删掉的话就报错-->
        <property name="greeting" value="Hello Everyone!"/>
     </bean>

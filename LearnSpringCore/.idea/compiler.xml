@@ -6,10 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="04_Spring_DI" />
+        <module name="08_Spring_AOP" />
+        <module name="06_Spring_AppConfig" />
+        <module name="06_Spring_Annotation" />
+        <module name="Spring_IOC" />
+        <module name="07_Spring_Proxy" />
+        <module name="05_Spring_Autowired" />
         <module name="03_Spring_IOC_Constructor" />
         <module name="02_Spring_IOC_basique" />
-        <module name="04_Spring_DI" />
-        <module name="Spring_IOC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

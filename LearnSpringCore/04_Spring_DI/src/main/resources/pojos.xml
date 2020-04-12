@@ -6,7 +6,7 @@
 
 
 
-    <bean id="student" class="com.kuang.pojo.Student" name="sdt">
+    <bean id="student" class="Student" name="sdt">
         <!--普通值注入value-->
         <property name="name" value="Sandra"/>
         <!--普通值注入value也可写成这种复杂点的格式-->
@@ -70,7 +70,7 @@
     </bean>
 
 
-    <bean id="address" class="com.kuang.pojo.Address" name="adr">
+    <bean id="address" class="com.kuang.service.pojo.Address" name="adr">
         <property name="address" value="4 street"/>
     </bean>
 

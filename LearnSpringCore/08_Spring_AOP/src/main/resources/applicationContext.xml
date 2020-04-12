@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--注册bean-->
+    <bean id="userService" class="com.kuang.service.UserServiceImpl"/>
+    <bean id="afterLog" class="com.kuang.log.AfterLog"/>
+    <bean id="beforeLog" class="com.kuang.log.BeforeLog"/>
+
+    <aop:config>
+        <!--配置切入点pointcut-->
+
+        <!--execution语法：
+        execution([修饰符]　返回值类型　方法名(参数)) 修饰符可选
+        例子：execution(* hello(..))  所有的hello()方法
+
+        execution(* com.kuang.service.UserServiceImpl.*(..)
+        表示"返回类型为所有*" + "UserServiceImpl下所有的方法" + "参数为任意.."
+        -->
+        <aop:pointcut id="mypointcut" expression="execution(* com.kuang.service.UserServiceImpl.*(..))"/>
+
+        <!--把beforeLog类切入到myPointcut指定的切入点-->
+        <aop:advisor advice-ref="beforeLog" pointcut-ref="mypointcut"/>
+        <aop:advisor advice-ref="afterLog" pointcut-ref="mypointcut"/>
+
+    </aop:config>
+
+</beans>
