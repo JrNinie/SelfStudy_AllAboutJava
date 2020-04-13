@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        ">
+
+    <!--    开启扫描注解-->
+    <context:component-scan base-package="com.itcast"/>
+
+<!--    视图解析器-->
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+<!--    配置自定义类型转换器（在原有的基础上加上自己写的StringToDate）-->
+    <bean id="conversionServiceFactoryBean" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+<!--                把自定义的转换类加进来，然后别忘了去mvc annotation drive 里面添加进去-->
+                <bean class="com.itcast.utils.StringToDate"/>
+            </set>
+        </property>
+    </bean>
+
+
+<!--    打开springmvc注解支持-->
+<!--    并且相当于默认加载了HandlerMapping和HandelerAdapter-->
+<!--    后面的concersion-service是后面添加的，为了就是使用自己写的类型转换类-->
+    <mvc:annotation-driven conversion-service="conversionServiceFactoryBean"/>
+
+</beans>
