@@ -29,15 +29,16 @@
 <%--</form>--%>
 
 
-<form method="get" action="test/userDate">
+<%--<form method="get" action="test/userDate">--%>
 
+<%--    user name: <input typ="text" name="uname">--%>
+<%--    user age: <input typ="text" name="age">--%>
+<%--    user birthday: <input typ="text" name="birthday">--%>
 
-    user name: <input typ="text" name="uname">
-    user age: <input typ="text" name="age">
-    user birthday: <input typ="text" name="birthday">
+<%--    <input type="submit" value="submit">--%>
+<%--</form>--%>
 
-    <input type="submit" value="submit">
-</form>
+<a href="test/api" > 获取原生API </a>
 
 
 

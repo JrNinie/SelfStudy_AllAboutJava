@@ -38,4 +38,8 @@
 <!--    后面的concersion-service是后面添加的，为了就是使用自己写的类型转换类-->
     <mvc:annotation-driven conversion-service="conversionServiceFactoryBean"/>
 
+
+<!--    前端控制器dispatcherServlet不拦截哪些资源-->
+<!--    表示webapp下面的resources内的所有都不会被拦截-->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 </beans>

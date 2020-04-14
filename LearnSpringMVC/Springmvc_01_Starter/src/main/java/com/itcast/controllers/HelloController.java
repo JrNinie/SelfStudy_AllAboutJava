@@ -2,9 +2,15 @@ package com.itcast.controllers;
 
 import com.itcast.domain.Account;
 import com.itcast.domain.User;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping(path = "/test")
@@ -68,6 +74,17 @@ public class HelloController {
     @RequestMapping("userDate")
     public String testUserDate(User user){
         System.out.println(user);
+        return "success";
+    }
+
+    @RequestMapping("api")
+    public String testApi(HttpServletRequest request, HttpServletResponse response){
+        HttpSession session = request.getSession();
+        ServletContext context = session.getServletContext();
+        System.out.println(request);
+        System.out.println(response);
+        System.out.println(session);
+        System.out.println(context);
         return "success";
     }
 }

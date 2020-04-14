@@ -19,6 +19,7 @@
 
   <servlet-mapping>
     <servlet-name>dispatcherServlet</servlet-name>
+<!--    dispatcherServlet会拦截所有的资源，导致一些静态资源css,js,images也被拦截。解决办法：去springmvcConfig.xml里面设置不被拦截-->
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
