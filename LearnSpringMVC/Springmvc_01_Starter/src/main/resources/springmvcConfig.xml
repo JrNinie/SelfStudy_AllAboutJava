@@ -42,4 +42,21 @@
 <!--    前端控制器dispatcherServlet不拦截哪些资源-->
 <!--    表示webapp下面的resources内的所有都不会被拦截-->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+
+
+<!--    配置异常处理器-->
+    <bean id="sysExceptionResolver" class="com.itcast.exceptions.SysExceptionResolver"/>
+
+<!--    配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+<!--            <mvc:mapping path="/**"/> 要拦截的路径， 表示所有路径会被拦截-->
+<!--            <mvc:exclude-mapping path=""/> 不拦截的路径-->
+<!--            两者选一个写就可-->
+            <mvc:mapping path="/interceptor/**"/> <!--表示只有interceptor开头的路径会被拦截-->
+<!--            配置拦截器对象-->
+            <bean class="com.itcast.interceptors.MyInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>

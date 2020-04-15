@@ -7,8 +7,10 @@
 <body>
  success!
 
- name :${requestScope.myUser.uname}
- age ： ${myUser.age}
+<%-- name :${requestScope.myUser.uname}--%>
+<%-- age ： ${myUser.age}--%>
+
+ <% System.out.println("in success jsp");%>
 
 </body>
 </html>

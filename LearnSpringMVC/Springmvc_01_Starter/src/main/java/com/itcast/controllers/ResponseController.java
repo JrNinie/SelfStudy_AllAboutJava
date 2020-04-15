@@ -3,7 +3,9 @@ package com.itcast.controllers;
 import com.itcast.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -79,5 +81,17 @@ public class ResponseController {
         //但是spring比原生的HttpServletRequest高级在不需要通过request.getContextPath()添加项目名
         return "redirect:/index.jsp";
     }
+
+
+    @RequestMapping("testAjax")
+    public @ResponseBody User ajax(@RequestBody User user){
+        System.out.println("从jsp发送来的user信息" + user);
+        //模拟查询数据库（得到的内容和接收到的JSON内容不完全一致）
+        user.setUname("Anais");
+        user.setAge(39);
+        //响应,为了保证响应回去的是json格式，就需要@ResponseBody做转换
+        return user;
+    }
+
 
 }

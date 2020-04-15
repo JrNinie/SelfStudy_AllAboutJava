@@ -40,6 +40,8 @@
 
 <a href="test/api" > 获取原生API </a>
 
+<a href="interceptor/pre">interceptor pre</a>
+
 
 
 </body>
