@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<!--一定别忘了引入thymeleaf的依赖-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User thymeleaf</title>
+</head>
+<body>
+
+<div th:text="${msg}"></div>
+<h4 th:each="u:${users}" th:text="${u}"></h4>
+
+</body>
+</html>
